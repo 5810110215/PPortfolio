@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -24,9 +24,39 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .loading-overlay {
+            display: none;
+            background: rgba(255, 255, 255, 0.7);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 9998;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loading-overlay.is-active {
+            display: flex;
+        }
+
+        .code {
+            font-family: monospace;
+            /*   font-size: .9em; */
+            color: #dd4a68;
+            background-color: rgb(238, 238, 238);
+            padding: 0 3px;
+        }
+    </style>
+
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
+
+
     <!-- Navbar Start -->
     <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
@@ -43,27 +73,33 @@
                 <a href="#skill" class="nav-item nav-link">Skill</a>
                 <a href="#service" class="nav-item nav-link">Service</a>
                 <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-               
+
                 <a href="#blog" class="nav-item nav-link">Tools</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-          
+
         </div>
     </nav>
     <!-- Navbar End -->
 
+    <div class="loading-overlay">
+        <span class="fas fa-spinner fa-3x fa-spin"></span>
+    </div>
+
 
     <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button>        
+                    </button>
                     <!-- 16:9 aspect ratio -->
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                        <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
+                            allow="autoplay"></iframe>
                     </div>
                 </div>
             </div>
@@ -81,11 +117,12 @@
                 </div>
                 <div class="col-lg-7 text-center text-lg-left">
                     <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Piyaphat Puttaviro</h1>
+                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">
+                        Piyaphat Puttaviro</h1>
                     <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
+                    <div class="typed-text d-none">Web Designer, Web Developer, It Support</div>
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                       
+
                     </div>
                 </div>
             </div>
@@ -95,7 +132,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
+    <div class="container-fluid py-5 " id="about">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
@@ -107,17 +144,30 @@
                 </div>
                 <div class="col-lg-7">
                     <h3 class="mb-4">Personal Information</h3>
-                    <p>Hello, my name is Mr. Piyaphat Puttaviro. I graduated from Prince of Songkhla University. Faculty of Engineering I like technology. like to learn and want to develop myrself</p>
+                    <p>Hello, my name is Piyaphat Puttaviro. I graduated from Prince of Songkhla University. Faculty of
+                        Engineering I like technology. like to learn and want to develop myself</p>
                     <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Piyaphat Puttaviro</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">13 june 1996</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Bachelor </span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">094-9309624</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">Piyaphat_paiy@hotmail.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">340 M.10 Hatyai Songkhla 90110</span></h6></div>
-                       
+                        <div class="col-sm-6 py-2">
+                            <h6>Name: <span class="text-secondary">Piyaphat Puttaviro</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Birthday: <span class="text-secondary">13 june 1996</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Degree: <span class="text-secondary">Bachelor </span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Phone: <span class="text-secondary">094-9309624</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Email: <span class="text-secondary">Piyaphat_paiy@hotmail.com</span></h6>
+                        </div>
+                        <div class="col-sm-6 py-2">
+                            <h6>Address: <span class="text-secondary">340 M.10 Hatyai Songkhla 90110</span></h6>
+                        </div>
+
                     </div>
-                 
+
                 </div>
             </div>
         </div>
@@ -128,37 +178,57 @@
     <!-- Qualification Start -->
     <div class="container-fluid py-5" id="qualification">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
-            </div>
-            <div class="row align-items-center">    
-                <div class="col-lg-6">
-                    
+            <div class="pl-3">
+                <div class="position-relative d-flex align-items-center justify-content-center">
+                    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality
+                    </h1>
+                    <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">High School</h5>
-                            <p class="mb-2"><strong>Hatyaiwittayalaisomboonkulkanya school</strong> | <small>2011 - 2014</small></p>
-                            <p>I studied at Hatyai Wittayalai Somboonkulkanya School. Science-Mathematics Program </p>
+                            <p class="mb-2"><strong>Hatyaiwittayalaisomboonkulkanya school</strong> | <small>2011 -
+                                    2014</small></p>
+                            <p>I studied at Hatyai Wittayalai Somboonkulkanya School. Science-Mathematics Program. </p>
                             <p> GPA 2.92 </p>
                         </div>
+
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Bachelor Degrees</h5>
-                            <p class="mb-2"><strong>prince of songkla university </strong> | <small>2015-2020</small></p>
-                            <p>I studied at Prince of Songkhla University. Hat Yai Campus Faculty of Engineering Department of Computer Engineering 
-                            </p> <P> GPA 2.41</p>
+                            <p class="mb-2"><strong>prince of songkla university </strong> | <small>2015-2020</small>
+                            </p>
+                            <p>I studied at Prince of Songkhla University. Hat Yai Campus Faculty of Engineering
+                                Department
+                                of
+                                Computer Engineering.
+                            </p>
+                            <P> GPA 2.41</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-sm-12">
                     <h3 class="mb-4">My Expericence</h3>
                     <div class="border-left border-primary pt-2 pl-4 ml-2">
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Intern</h5>
-                            <p class="mb-2"><strong>Provincial Electricity Authority Hatyai</strong> | <small>2020</small></p>
-                            <p>I did and internship at Hat Yai Provincial Electricity Authority. computer control department.</p>
+                            <p class="mb-2"><strong>Provincial Electricity Authority Hatyai</strong> |
+                                <small>2020</small>
+                            </p>
+                            <p>I did and internship at Hat Yai Provincial Electricity Authority. computer control
+                                department.
+                            </p>
                             <p>- Install and set up computer for efficient use.</p>
                             <p>- Advise and solve computer usage problems.</p>
                             <p>- Responsibility in security of computer and Network.</p>
@@ -166,17 +236,31 @@
                             <p>- Upload various information to the website.</p>
                         </div>
                         <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
+                            <i class="far fa-dot-circle text-primary position-absolute"
+                                style="top: 2px; left: -32px;"></i>
                             <h5 class="font-weight-bold mb-1">Project</h5>
-                            <p class="mb-2"><strong>Automatic Electronic Components Storage</strong> | <small>2019</small></p>
-                            <p>Write and develop programs to store device information such as name, number, output and input amount, and control the robot arm. Which can be controlled either automatically or manually to pick up the equipment box..</p>
+                            <p class="mb-2"><strong>Automatic Electronic Components Storage</strong> |
+                                <small>2019</small>
+                            </p>
+                            <p>Write and develop programs to store device information such as name, number, output and
+                                input
+                                amount, and control the robot arm. Which can be controlled either automatically or
+                                manually to
+                                pick up the equipment box.</p>
                         </div>
-                      
-                        
+
+
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="col-lg-6 col-sm-12" style="margin: auto;" id="polarArea">
+
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
     <!-- Qualification End -->
 
@@ -196,7 +280,8 @@
                             <h6 class="font-weight-bold">80%</h6>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="skill mb-4">
@@ -205,7 +290,8 @@
                             <h6 class="font-weight-bold">80%</h6>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="skill mb-4">
@@ -214,7 +300,8 @@
                             <h6 class="font-weight-bold">80%</h6>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -225,7 +312,8 @@
                             <h6 class="font-weight-bold">70%</h6>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="skill mb-4">
@@ -234,7 +322,8 @@
                             <h6 class="font-weight-bold">70%</h6>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                     <div class="skill mb-4">
@@ -243,7 +332,8 @@
                             <h6 class="font-weight-bold">80%</h6>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
@@ -260,15 +350,15 @@
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
                 <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
             </div>
-            
+
             <div class="row pb-3">
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
                         <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Web Design</h4>
                     </div>
-                    <p>Design a website to be beautiful. Can be used easily, comfortable on the eyes.   </p>
-                        
+                    <p>Design a Website to be beautiful. Can be used easily, comfortable on the eyes. </p>
+
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
@@ -276,7 +366,7 @@
                         <h4 class="font-weight-bold m-0">Web Development</h4>
                     </div>
                     <p>website development to be able to actually use and can be used effectively.</p>
-            
+
                 </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
@@ -284,10 +374,10 @@
                         <h4 class="font-weight-bold m-0">Database</h4>
                     </div>
                     <p>Database design and management to be able to store information and can retrieve the data.</p>
-      
+
                 </div>
-              
-               
+
+
 
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
@@ -296,17 +386,26 @@
                     </div>
                     <p>Able to work on documents such as Microsoft Office,
                         Google Doc, Google Sheets or other documents.</p>
-                   
-                </div>
 
+                </div>
                 <div class="col-lg-4 col-md-6 text-center mb-5">
                     <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-male service-icon bg-primary text-white mr-3" ></i> 
+                        <i class="fa fa-2x fa-save service-icon bg-primary text-white mr-3"></i>
+                        <h4 class="font-weight-bold m-0">It Support</h4>
+                    </div>
+
+                    <p>Support work and solve computer problems along with instructions on how to use,
+                        assist with device installation/ maintenance.</p>
+
+                </div>
+                <div class="col-lg-4 col-md-6 text-center mb-5">
+                    <div class="d-flex align-items-center justify-content-center mb-4">
+                        <i class="fa fa-2x fa-male service-icon bg-primary text-white mr-3"></i>
                         <h4 class="font-weight-bold m-0">Soft Skill</h4>
                     </div>
-                    
+
                     <p>Be a positive person Able to work as a team and like to learn to improve Myself.</p>
-                    
+
                 </div>
             </div>
         </div>
@@ -324,10 +423,10 @@
             <div class="row">
                 <div class="col-12 text-center mb-2">
                     <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Development</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
+                        <li class="btn btn-sm btn-outline-primary m-1 active" data-filter="*">All</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Software</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Hardware</li>
+                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Document</li>
                     </ul>
                 </div>
             </div>
@@ -337,57 +436,147 @@
                         <img class="img-fluid rounded w-100" src="img/codee.png" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
                             <a href="img/codee.png" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/firebase.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/firebase.png" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/xampp.png" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/xampp.png" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/work4.jpg" alt="">
+                        <img class="img-fluid rounded w-100" src="img/firebase.png" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/work4.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="img/firebase.png" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/xampp-p.png" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/xampp.png" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/GitHub web.jpg.png" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/GitHub web.jpg.png" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/work5.jpg" alt="">
+                        <img class="img-fluid rounded w-100" src="img/pea5.jpg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/work5.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="img/pea5.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/pea7.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/pea7.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/pea4.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/pea4.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/work2.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/work2.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first ">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/store.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/store.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
                     <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100"  src="img/work6.jpg" alt="">
+                        <img class="img-fluid rounded w-100" src="img/document.jpg" alt="">
                         <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/work6.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
+                            <a href="img/document.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/sap.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/sap.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/poe.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/poe.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/server.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/server.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/computer.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/computer.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
+                    <div class="position-relative overflow-hidden mb-2">
+                        <img class="img-fluid rounded w-100" src="img/repare.jpg" alt="">
+                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
+                            <a href="img/repare.jpg" data-lightbox="portfolio">
+                                <i class="fa fa-search text-white" style="font-size: 60px;"></i>
                             </a>
                         </div>
                     </div>
@@ -399,58 +588,75 @@
 
 
     <!-- Testimonial Start -->
-   
+
     <!-- Testimonial End -->
 
 
     <!-- Blog Start -->
-    <div class="container-fluid pt-5" id="blog">
+    <div class="container-fluid pt-5 text-center" id="blog">
         <div class="container">
             <div class="position-relative d-flex align-items-center justify-content-center">
                 <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Tools</h1>
                 <h1 class="position-absolute text-uppercase text-primary">Tools</h1>
             </div>
             <div class="row">
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5 m-auto">
                     <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-50" src="img/mysql.png" alt=" " >
-                       
+                        <img class="img-fluid rounded w-50" src="img/mysql.png" alt=" ">
+
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5 m-auto">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded w-50" src="img/firebase logo.png" alt="">
-                   
+
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5 m-auto">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded w-50" src="img/mssql logo.png" alt="">
-                    
+
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5 m-auto">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded w-50" src="img/GitHub-logo.jpg" alt="">
-                     
-                           
-                        
+
+
+
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5 m-auto">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded w-50" src="img/xampp-logo.png" alt="">
-                        
-                    
+
+
                     </div>
                 </div>
-                <div class="col-lg-4 mb-5">
+                <div class="col-lg-4 mb-5 m-auto">
                     <div class="position-relative mb-4">
                         <img class="img-fluid rounded w-50" src="img/arduino5804.jpg" alt="">
-                       
+
                     </div>
                 </div>
+                <div class="col-lg-4 mb-5 m-auto">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-50" src="img/js.jpg" alt="">
 
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5 m-auto">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-50" src="img/bootstrap.jpg" alt="">
+
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5 m-auto">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded w-50" src="img/microsolf.png" alt="">
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -468,7 +674,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form text-center">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                        <form name="sentMessage" id="contactFormJ" novalidate="novalidate">
                             <div class="form-row">
                                 <div class="control-group col-sm-6">
                                     <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
@@ -477,13 +683,14 @@
                                 </div>
                                 <div class="control-group col-sm-6">
                                     <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
+                                        required="required"
+                                        data-validation-required-message="Please enter your email" />
+                                    <p class="help-block tformext-danger"></p>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
+                                    required="required"="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="control-group">
@@ -504,30 +711,48 @@
     </div>
     <!-- Contact End -->
 
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Contact</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    
+                    <h3 id="text_status" class="text-center"></h3>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
         <div class="container text-center py-5">
             <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="https://twitter.com/Sglppp"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/piyaphat.puttaviro/"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social" href="https://www.instagram.com/piyaphat1/"><i class="fab fa-instagram"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://twitter.com/Sglppp"><i
+                        class="fab fa-twitter"></i></a>
+                <a class="btn btn-light btn-social mr-2" href="https://www.facebook.com/piyaphat.puttaviro/"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-light btn-social" href="https://www.instagram.com/piyaphat1/"><i
+                        class="fab fa-instagram"></i></a>
             </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Privacy</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Terms</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">FAQs</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Help</a>
-            </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved.
+                Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
             </p>
         </div>
     </div>
-    
-    
+
+
     <!-- Footer End -->
 
     <!-- Scroll to Bottom -->
@@ -551,8 +776,142 @@
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
 
+
+
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+    <!--polararea Javascript -->
+    <script>
+        var options = {
+            series: [80, 80, 70, 50, 65],
+            chart: {
+                width: 350,
+                type: 'polarArea'
+            },
+            labels: ['Microsoft Office', 'Communication', 'It Support', 'Network', 'Security'],
+            fill: {
+                opacity: 1,
+                //   colors: ['#F44336', '#E91E63', '#9C27B0']
+            },
+            responsive: [{
+                breakpoint: 440,
+                options: {
+                    chart: {
+                        width: 350
+                    },
+                    legend: {
+                        position: 'bottom'
+                    }
+                }
+            }],
+            stroke: {
+                width: 1,
+                colors: undefined
+            },
+            yaxis: {
+                show: false
+            },
+            legend: {
+                position: 'bottom'
+            },
+            plotOptions: {
+                polarArea: {
+                    rings: {
+                        strokeWidth: 0
+                    },
+                    spokes: {
+                        strokeWidth: 0
+                    },
+                }
+            },
+            // theme: {
+            //   monochrome: {
+            //     enabled: true,
+            //     shadeTo: 'light',
+            //     shadeIntensity: 0.6
+            //   }
+            // }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#polarArea"), options);
+        chart.render();
+    </script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+
+
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyASBphJyBZvk0vCNNiDe3wKUKzK-uOgedM",
+            authDomain: "piyaphatportfolio-b53d5.firebaseapp.com",
+            databaseURL: "https://piyaphatportfolio-b53d5-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "piyaphatportfolio-b53d5",
+            storageBucket: "piyaphatportfolio-b53d5.appspot.com",
+            messagingSenderId: "1018081028933",
+            appId: "1:1018081028933:web:8780412f692caee0d46c2c",
+            measurementId: "G-FRN3CHGTP7"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+
+        // Reference contactInfo collections
+        // let contactFormDB = db.database().ref('contact-form')
+
+        let overlay = document.getElementsByClassName('loading-overlay')[0]
+
+
+        const form = document.getElementById("contactFormJ");
+        form.addEventListener("submit", function (event) {
+            overlay.classList.toggle('is-active')
+            event.preventDefault(); // prevent the form from submitting and refreshing the page
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const message = document.getElementById("message").value;
+            console.log(name, email, subject, message); // display the form data in the browser console
+
+            const data = {
+                name: name,
+                email: email,
+                subject: subject,
+                message: message
+            };
+
+            // Add the data to a Firestore document
+            db.collection("test").doc(subject).set(data)
+                .then(() => {
+                    console.log("Data successfully written to Firestore!");
+                    overlay.classList.toggle('is-active')
+                    document.getElementById("text_status").innerHTML = "Send data success."
+                    $('#exampleModalCenter').modal('show')
+                })
+                .catch((error) => {
+                    console.error("Error writing data to Firestore: ", error);
+                    overlay.classList.toggle('is-active')
+                    document.getElementById("text_status").innerHTML = "Send data error."
+                    $('#exampleModalCenter').modal('show')
+                });
+        });
+
+    </script>
+    </script>
 </body>
 
 </html>
